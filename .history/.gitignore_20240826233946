@@ -9,7 +9,7 @@
 .env
 .env.backup
 .env.production
-notifications.txt
+
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
