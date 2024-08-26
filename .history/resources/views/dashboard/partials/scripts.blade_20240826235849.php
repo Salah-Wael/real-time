@@ -29,7 +29,7 @@
 <script src='{{ asset('assets') }}/js/uppy.min.js'></script>
 <script src='{{ asset('assets') }}/js/quill.min.js'></script>
 
-{{-- <script>
+<script>
     $(document).ready(function () {
         //========================================MARK ALL NOTIFICATION TO READ============================
         $(document).on('click', ".notificationsIcon", function(){
@@ -61,4 +61,4 @@
             });
         });
     });
-</script> --}}
+</script>

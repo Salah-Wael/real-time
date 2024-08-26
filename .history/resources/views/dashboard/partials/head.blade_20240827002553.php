@@ -27,19 +27,18 @@
     @stack('styles')
 
     <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
-    <script>
-        // Enable pusher logging - don't include this in production
-        Pusher.logToConsole = false;
+  <script>
 
-        var pusher = new Pusher("{{ env('PUSHER_APP_KEY') }}", {
-            cluster: 'ap2'
-        });
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
 
-        var channel = pusher.subscribe('new-user-channel');
-        channel.bind('App\\Events\\RegisterNewUserEvent', function(data) {
-            console.log(data['message']);
-            $(".notificationsIcon").load(" .notificationsIcon > *");
-            $("#notificationsModal").load(" #notificationsModal > *");
-        });
-    </script>
+    var pusher = new Pusher('277c1028dfa8bce46a18', {
+      cluster: 'ap2'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert(JSON.stringify(data));
+    });
+  </script>
 </head>

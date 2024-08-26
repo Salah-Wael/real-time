@@ -38,8 +38,6 @@
         var channel = pusher.subscribe('new-user-channel');
         channel.bind('App\\Events\\RegisterNewUserEvent', function(data) {
             console.log(data['message']);
-            $(".notificationsIcon").load(" .notificationsIcon > *");
-            $("#notificationsModal").load(" #notificationsModal > *");
         });
     </script>
 </head>

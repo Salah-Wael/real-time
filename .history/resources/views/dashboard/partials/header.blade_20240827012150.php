@@ -8,8 +8,7 @@
         <li class="nav-item nav-notif">
             <a class="nav-link text-muted my-2 notificationsIcon" 
             href="./#" 
-            data-toggle="modal" 
-            data-target=".modal-notif">
+            data-toggle="modal" data-target=".modal-notif">
                 <span class="dot dot-md bg-success"></span>
                 <span class="fe fe-bell fe-16"></span>
                 <span class="text-success" 
@@ -32,7 +31,7 @@
                     </div>
                     <div class="modal-body" id="notificationsModal">
                         <div class="list-group list-group-flush my-n3">
-                            @forelse (Auth::guard('admin')->user()->notifications->take(5) as $notification)
+                            @forelse (Auth::guard('admin')->user()->notifications as $notification)
                                 <div class="list-group-item @if($notification->unread()) bg-light @else bg-transparent @endif ">
                                     <div class="row align-items-center">
                                         <div class="col-auto">

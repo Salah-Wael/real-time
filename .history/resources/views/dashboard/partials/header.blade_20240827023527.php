@@ -32,7 +32,7 @@
                     </div>
                     <div class="modal-body" id="notificationsModal">
                         <div class="list-group list-group-flush my-n3">
-                            @forelse (Auth::guard('admin')->user()->notifications->take(5) as $notification)
+                            @forelse (Auth::guard('admin')->user()->notifications as $notification)
                                 <div class="list-group-item @if($notification->unread()) bg-light @else bg-transparent @endif ">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
